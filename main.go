@@ -16,11 +16,11 @@ func main() {
 	r.Use(middleware.Logger)
 
 	r.Get("/", controllers.StaticHandler(
-		views.Must(views.ParseFS(templates.FS, "home.gohtml")),
+		views.Must(views.ParseFS(templates.FS, "layout-page.gohtml", "home.gohtml")),
 	))
 
 	r.Get("/contact", controllers.StaticHandler(
-		views.Must(views.ParseFS(templates.FS, "contact.gohtml")),
+		views.Must(views.ParseFS(templates.FS, "layout-page.gohtml", "contact.gohtml")),
 	))
 
 	r.Get("/faq", controllers.FAQ(
