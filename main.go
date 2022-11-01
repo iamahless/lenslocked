@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
+	"net/http"
+
 	"github.com/iamahless/lenslocked/controllers"
 	"github.com/iamahless/lenslocked/templates"
 	"github.com/iamahless/lenslocked/views"
-	"net/http"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
